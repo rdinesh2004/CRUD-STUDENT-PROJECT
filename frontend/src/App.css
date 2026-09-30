@@ -1,0 +1,243 @@
+/* ================================
+   STUDENTHUB - MAIN THEME
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #edf4f8;
+  color: #1f2937;
+}
+
+/* ================================
+   MAIN APP
+================================ */
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #edf4f8,
+    #dbe9f3
+  );
+}
+
+/* ================================
+   PAGE CONTENT
+================================ */
+
+.app > *:not(header) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* ================================
+   HEADINGS
+================================ */
+
+.app h1 {
+  margin: 30px 0 25px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #16324f;
+}
+
+.app h2 {
+  color: #16324f;
+}
+
+/* ================================
+   CARD ANIMATION
+================================ */
+
+.MuiCard-root {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(30, 80, 110, 0.15);
+}
+
+/* ================================
+   BUTTON ANIMATION
+================================ */
+
+.MuiButton-root {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+/* ================================
+   INPUT FOCUS
+================================ */
+
+.MuiTextField-root {
+  transition: transform 0.2s ease;
+}
+
+.MuiTextField-root:focus-within {
+  transform: translateY(-2px);
+}
+
+/* ================================
+   TABLE
+================================ */
+
+.MuiTableRow-root {
+  transition: background-color 0.2s ease;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: #f1f7fb;
+}
+
+/* ================================
+   STUDENT SECTION
+================================ */
+
+.students-section {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* ================================
+   NO DATA
+================================ */
+
+.no-data {
+  padding: 25px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  color: #64748b;
+  box-shadow: 0 4px 15px rgba(30, 80, 110, 0.08);
+}
+
+/* ================================
+   SMOOTH PAGE LOAD
+================================ */
+
+.app {
+  animation: pageLoad 0.5s ease;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .app h1 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+}
+/* =========================
+   DARK MODE
+========================= */
+
+.app.dark-mode {
+  background: #111827;
+  color: #f9fafb;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Headings */
+
+.app.dark-mode h1,
+.app.dark-mode h2 {
+  color: #f9fafb;
+}
+
+
+/* MUI Cards */
+
+.app.dark-mode .MuiCard-root {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+
+/* Card text */
+
+.app.dark-mode .MuiTypography-root {
+  color: inherit;
+}
+
+
+/* Paper */
+
+.app.dark-mode .MuiPaper-root {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+
+/* TextField */
+
+.app.dark-mode .MuiOutlinedInput-root {
+  color: white;
+  background: #374151;
+}
+
+
+/* TextField Label */
+
+.app.dark-mode .MuiInputLabel-root {
+  color: #d1d5db;
+}
+
+
+/* Table */
+
+.app.dark-mode .MuiTableContainer-root {
+  background: #1f2937;
+}
+
+
+/* Table text */
+
+.app.dark-mode .MuiTableCell-root {
+  color: #f9fafb;
+}
+
+
+/* Student filter */
+
+.app.dark-mode .MuiSelect-select {
+  color: white;
+}
+
+
+/* Dark mode transition */
+
+.app {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
